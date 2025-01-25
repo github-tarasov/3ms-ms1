@@ -12,6 +12,7 @@ import org.ms.ms1.repo.SesionRepository;
 import org.ms.ms1.websocket.MS1WebSocketProducer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -33,6 +34,8 @@ public class MS1Service {
     * */
     private boolean isStop = false;
 
+
+    @Transactional
     public void start() {
         Interaction interaction = new Interaction();
         interaction = interactionRepository.save(interaction);
@@ -60,6 +63,7 @@ public class MS1Service {
         isStop = true;
     }
 
+    @Transactional
     public void store(Message message) {
         // Save session details to DB
         Session session = sesionRepository.findById(message.getSessionId())

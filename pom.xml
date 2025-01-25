@@ -42,6 +42,7 @@
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>io.opentelemetry.instrumentation</groupId>
@@ -171,7 +172,7 @@
                             <registry>registry.hub.docker.com</registry>
                             <authConfig>
                                 <username>docker4tarasov</username>
-                                <password></password>
+                                <password>9562876</password>
                             </authConfig>
                             <images>
                                 <image>
