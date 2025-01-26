@@ -172,7 +172,7 @@
                             <registry>registry.hub.docker.com</registry>
                             <authConfig>
                                 <username>docker4tarasov</username>
-                                <password>9562876</password>
+                                <password>${env.DOCKERHUB_PASS}</password>
                             </authConfig>
                             <images>
                                 <image>
